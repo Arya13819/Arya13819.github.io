@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ══ SEO & SHARING (recruiters often get your link on LinkedIn/WhatsApp — this controls the preview) ══ -->
+<title>Arya Gupta — Python & ERP Developer | Portfolio</title>
+<meta name="description" content="Arya Gupta — Python Developer, ERP Engineer & Data Analyst. I build automation systems, ERPNext modules, and data pipelines. Open to SWE, Data & ERP roles."/>
+<meta property="og:title" content="Arya Gupta — Python & ERP Developer"/>
+<meta property="og:description" content="ERPNext modules in production, 92%-accuracy face recognition system, data pipelines. Open to full-time roles."/>
+<meta property="og:type" content="website"/>
+<!-- TODO: after you deploy, add these two lines with your real URL + a 1200x630 screenshot of your hero:
+<meta property="og:url" content="https://yourdomain.com"/>
+<meta property="og:image" content="https://yourdomain.com/og-image.png"/> -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧡</text></svg>"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;} /* anchors no longer hide under the fixed nav */
+body{
+  background:#FFF8F2;
+  color:#2B1F1A;
+  font-family:'Manrope',sans-serif;
+  overflow-x:hidden;
+}
+
+/* visible keyboard focus = quiet professionalism */
+a:focus-visible,button:focus-visible{outline:2px solid #FF6B35;outline-offset:3px;border-radius:6px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;width:100%;z-index:200;
+  padding:1.2rem 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(255,248,242,0.85);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(43,31,26,0.06);
+}
+.nav-logo{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:#2B1F1A;}
+.nav-logo span{color:#FF6B35;}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{color:#8A7A6F;text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:#2B1F1A;}
+.nav-cta{
+  background:#2B1F1A;color:#FFF8F2!important;
+  padding:0.5rem 1.2rem;border-radius:999px;
+  font-size:0.82rem!important;transition:background 0.2s!important;
+}
+.nav-cta:hover{background:#FF6B35!important;color:#fff!important;}
+
+/* ── CONTAINER ── */
+.wrap{max-width:1280px;margin:0 auto;padding:0 5%;}
+
+/* ── HERO BENTO ── */
+#hero{padding:7rem 5% 2rem;}
+.bento{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:auto auto;
+  gap:1.25rem;
+  max-width:1280px;margin:0 auto;
+}
+.bento > div{
+  border-radius:24px;
+  padding:2rem;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Big intro tile */
+.b-intro{
+  grid-column:1/4;grid-row:1/3;
+  background:linear-gradient(135deg,#FF6B35 0%,#FF8C5A 50%,#FFB088 100%);
+  color:#fff;
+  display:flex;flex-direction:column;justify-content:space-between;
+  min-height:420px;
+}
+.b-intro .tag{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:999px;padding:0.4rem 1rem;
+  font-size:0.78rem;font-weight:600;width:fit-content;
+}
+.dot-live{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 8px #4ADE80;animation:pulse 2s infinite;}
+@keyframes pulse{50%{opacity:0.4}}
+.b-intro h1{
+  font-family:'Sora',sans-serif;
+  font-size:clamp(2.8rem,6vw,5.5rem);
+  font-weight:800;line-height:1.02;letter-spacing:-2px;
+  margin:1.5rem 0;
+}
+.b-intro p{font-size:1.05rem;font-weight:400;opacity:0.92;max-width:480px;line-height:1.6;}
+.b-intro-actions{display:flex;gap:0.8rem;margin-top:1.5rem;flex-wrap:wrap;}
+.b-btn{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:#2B1F1A;color:#fff;
+  padding:0.75rem 1.6rem;border-radius:999px;
+  font-family:'Sora',sans-serif;font-weight:600;font-size:0.85rem;
+  text-decoration:none;transition:all 0.2s;
+}
+.b-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+.b-btn-outline{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(255,255,255,0.15);
+  border:1.5px solid rgba(255,255,255,0.4);color:#fff;
+  padding:0.73rem 1.6rem;border-radius:999px;
+  font-family:'Sora',sans-serif;font-weight:600;font-size:0.85rem;
+  text-decoration:none;transition:all 0.2s;
+}
+.b-btn-outline:hover{background:rgba(255,255,255,0.28);transform:translateY(-2px);}
+
+/* Photo tile */
+.b-photo{
+  grid-column:4/5;grid-row:1/2;
+  background:#2B1F1A;
+  padding:0;
+  display:flex;align-items:flex-end;
+  min-height:200px;
+}
+.b-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  position:absolute;inset:0;
+}
+.b-photo-overlay{
+  position:relative;z-index:1;
+  background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);
+  width:100%;padding:1.2rem;color:#fff;
+}
+.b-photo-overlay .name{font-family:'Sora',sans-serif;font-weight:700;font-size:1rem;}
+.b-photo-overlay .role{font-size:0.75rem;opacity:0.8;}
+
+/* Location tile */
+.b-loc{
+  grid-column:4/5;grid-row:2/3;
+  background:#FFEDE2;
+  border:1px solid rgba(255,107,53,0.15);
+  display:flex;flex-direction:column;justify-content:center;
+  min-height:200px;
+}
+.b-loc-label{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#FF6B35;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;}
+.b-loc-val{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.2rem;}
+.b-loc-sub{font-size:0.82rem;color:#8A7A6F;line-height:1.6;}
+
+/* ── MARQUEE ── */
+.marquee{
+  background:#2B1F1A;color:#FFF8F2;
+  padding:0.9rem 0;overflow:hidden;margin:3rem 0 0;
+}
+.m-track{display:flex;white-space:nowrap;animation:scroll 24s linear infinite;}
+.m-track span{
+  padding:0 2rem;font-family:'Sora',sans-serif;
+  font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,248,242,0.6);
+}
+.m-track span.hl{color:#FF8C5A;}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── STATS ── */
+#stats{padding:4rem 5%;}
+.stats-row{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;
+  max-width:1280px;margin:0 auto;
+}
+.stat-tile{
+  background:#fff;border:1px solid rgba(43,31,26,0.06);
+  border-radius:18px;padding:1.8rem 1.5rem;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.stat-tile:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(255,107,53,0.12);}
+.stat-tile .n{
+  font-family:'Sora',sans-serif;font-size:2.4rem;font-weight:800;
+  color:#FF6B35;letter-spacing:-1px;margin-bottom:0.3rem;line-height:1;
+}
+.stat-tile .l{font-size:0.78rem;color:#8A7A6F;line-height:1.4;}
+
+/* ── SECTION COMMON ── */
+section{padding:4rem 5%;}
+.s-head{max-width:1280px;margin:0 auto 2.5rem;}
+.s-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#FF6B35;
+  letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.6rem;
+}
+.s-title{
+  font-family:'Sora',sans-serif;font-size:clamp(1.8rem,4vw,3rem);
+  font-weight:800;letter-spacing:-1px;color:#2B1F1A;
+}
+
+/* ── EXPERIENCE ── */
+.exp-wrap{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:1.25rem;}
+.exp-tile{
+  background:#fff;border:1px solid rgba(43,31,26,0.06);
+  border-radius:20px;padding:2rem 2.2rem;
+  display:grid;grid-template-columns:200px 1fr;gap:2rem;
+  transition:box-shadow 0.25s,transform 0.25s;
+}
+.exp-tile:hover{box-shadow:0 12px 36px rgba(255,107,53,0.1);transform:translateY(-2px);}
+.exp-meta{display:flex;flex-direction:column;gap:0.5rem;}
+.exp-period{
+  font-family:'JetBrains Mono',monospace;font-size:0.72rem;
+  background:#FFEDE2;color:#FF6B35;
+  padding:0.3rem 0.8rem;border-radius:999px;width:fit-content;
+}
+.exp-role{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:700;}
+.exp-co{font-size:0.82rem;color:#8A7A6F;}
+.exp-body ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem;margin-bottom:1rem;}
+.exp-body li{display:flex;gap:0.7rem;font-size:0.88rem;color:#4A3B33;line-height:1.6;}
+.exp-body li::before{content:'▸';color:#FF6B35;flex-shrink:0;}
+.exp-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.exp-tag{
+  font-family:'JetBrains Mono',monospace;font-size:0.7rem;
+  background:#F0FDF4;border:1px solid #BBF7D0;color:#15803D;
+  padding:0.25rem 0.7rem;border-radius:6px;
+}
+
+/* ── PROJECTS BENTO ── */
+.proj-bento{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;
+}
+.proj-tile{
+  background:#fff;border:1px solid rgba(43,31,26,0.06);
+  border-radius:20px;padding:1.8rem;
+  display:flex;flex-direction:column;
+  transition:all 0.25s;position:relative;overflow:hidden;
+}
+.proj-tile:hover{
+  border-color:rgba(255,107,53,0.3);transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(255,107,53,0.12);
+}
+.proj-tile.featured{
+  grid-column:1/3;
+  background:linear-gradient(135deg,#2B1F1A,#3D2C24);
+  color:#fff;
+}
+.proj-tile.featured .proj-desc{color:rgba(255,248,242,0.6);}
+.proj-tile.featured .proj-tagb{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:rgba(255,248,242,0.7);}
+.proj-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;}
+.proj-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:#FFEDE2;display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;
+}
+.proj-tile.featured .proj-icon{background:rgba(255,255,255,0.1);}
+.proj-idx{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#C9BBB1;}
+.proj-name{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;}
+.proj-desc{font-size:0.85rem;color:#8A7A6F;line-height:1.65;flex:1;margin-bottom:1.2rem;}
+.proj-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+.proj-tagrow{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.proj-tagb{
+  font-family:'JetBrains Mono',monospace;font-size:0.68rem;
+  background:#FFEDE2;border:1px solid rgba(255,107,53,0.15);color:#FF6B35;
+  padding:0.2rem 0.6rem;border-radius:5px;
+}
+.proj-link{
+  display:inline-flex;align-items:center;gap:0.35rem;
+  font-size:0.78rem;font-weight:700;color:#FF6B35;
+  text-decoration:none;transition:gap 0.2s;
+}
+.proj-link:hover{gap:0.55rem;}
+.proj-tile.featured .proj-link{color:#FFB088;}
+
+/* ── SKILLS ── */
+.skills-bento{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;
+}
+.skill-tile{
+  background:#fff;border:1px solid rgba(43,31,26,0.06);
+  border-radius:18px;padding:1.6rem;
+}
+.skill-tile h4{
+  font-family:'JetBrains Mono',monospace;font-size:0.72rem;
+  text-transform:uppercase;letter-spacing:0.12em;color:#FF6B35;margin-bottom:1rem;
+}
+.skill-pills{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.skill-pill{
+  background:#FFF8F2;border:1px solid rgba(43,31,26,0.08);
+  color:#4A3B33;font-size:0.82rem;font-weight:500;
+  padding:0.35rem 0.85rem;border-radius:8px;transition:all 0.2s;
+}
+.skill-pill:hover{background:#FFEDE2;border-color:#FF6B35;color:#FF6B35;}
+
+/* ── EDUCATION ── */
+.edu-tile{
+  max-width:1280px;margin:0 auto;
+  background:linear-gradient(135deg,#FFEDE2,#FFF8F2);
+  border:1px solid rgba(255,107,53,0.15);
+  border-radius:20px;padding:2.2rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;
+}
+.edu-degree{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.3rem;}
+.edu-uni{font-size:0.9rem;color:#8A7A6F;}
+.edu-badge{
+  font-family:'JetBrains Mono',monospace;font-size:0.8rem;
+  background:#2B1F1A;color:#FFF8F2;
+  padding:0.5rem 1.2rem;border-radius:999px;
+}
+
+/* ── CONTACT ── */
+#contact{
+  background:#2B1F1A;color:#FFF8F2;
+  border-radius:32px;
+  max-width:1280px;margin:0 auto 3rem;
+  padding:5rem 4%;text-align:center;
+  position:relative;overflow:hidden;
+}
+#contact::before{
+  content:'';position:absolute;top:-40%;right:-15%;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,107,53,0.25),transparent 70%);
+}
+.contact-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:0.72rem;
+  color:#FF8C5A;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem;
+  position:relative;z-index:1;
+}
+.contact-title{
+  font-family:'Sora',sans-serif;font-size:clamp(2.2rem,5vw,4.2rem);
+  font-weight:800;letter-spacing:-1.5px;margin-bottom:1.2rem;
+  position:relative;z-index:1;
+}
+.contact-title span{color:#FF6B35;}
+.contact-sub{font-size:0.95rem;color:rgba(255,248,242,0.5);margin-bottom:2.5rem;position:relative;z-index:1;}
+.contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;position:relative;z-index:1;}
+.contact-pill{
+  display:flex;align-items:center;gap:0.6rem;
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,248,242,0.8);padding:0.8rem 1.6rem;border-radius:999px;
+  text-decoration:none;font-size:0.85rem;font-weight:500;transition:all 0.2s;
+}
+.contact-pill:hover{background:#FF6B35;border-color:#FF6B35;color:#fff;transform:translateY(-2px);}
+
+footer{text-align:center;padding:2rem;color:#C9BBB1;font-size:0.78rem;font-family:'JetBrains Mono',monospace;}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .bento{grid-template-columns:repeat(2,1fr);}
+  .b-intro{grid-column:1/3;grid-row:1/2;}
+  .b-photo{grid-column:1/2;grid-row:2/3;}
+  .b-loc{grid-column:2/3;grid-row:2/3;}
+  .stats-row{grid-template-columns:repeat(2,1fr);}
+  .exp-tile{grid-template-columns:1fr;}
+  .proj-bento{grid-template-columns:1fr;}
+  .proj-tile.featured{grid-column:1/2;}
+}
+@media(max-width:640px){
+  .nav-links li:not(:last-child){display:none;}
+}
+@media(prefers-reduced-motion:reduce){
+  *,.dot-live{animation:none!important;transition:none!important;}
+  .reveal{opacity:1;transform:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Arya<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <!-- TODO: replace with your real GitHub username -->
+    <li><a href="https://github.com/Arya13819" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a href="mailto:Aryajpr2004@gmail.com" class="nav-cta">Hire me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO BENTO -->
+<section id="hero">
+  <div class="bento">
+    <div class="b-intro reveal">
+      <span class="tag"><span class="dot-live"></span> Open to full-time roles · Graduating May 2026</span>
+      <h1>Hi, I'm Arya<br/>Gupta.</h1>
+      <p>Python Developer · ERP Engineer · Data Analyst. I build automation systems, data pipelines, and ERP solutions that ship and scale — including ERPNext modules running in production today.</p>
+      <div class="b-intro-actions">
+        <!-- TODO: put your resume PDF in the same folder as this file, named resume.pdf -->
+        <a href="resume.pdf" download="Arya_Gupta_Resume.pdf" class="b-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+        <a href="mailto:Aryajpr2004@gmail.com" class="b-btn-outline">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Get in touch
+        </a>
+        <a href="https://linkedin.com/in/arya-gupta-067979256" target="_blank" rel="noopener noreferrer" class="b-btn-outline">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="b-photo reveal">
+      <!-- Save your headshot as photo.jpg in the same folder (this keeps the page fast — no more giant base64 blob) -->
+      <img src="photo.jpg" alt="Arya Gupta — Python and ERP developer" loading="lazy"/>
+      <div class="b-photo-overlay">
+        <div class="name">Arya Gupta</div>
+        <div class="role">Software Developer</div>
+      </div>
+    </div>
+
+    <div class="b-loc reveal">
+      <div class="b-loc-label">Based in</div>
+      <div class="b-loc-val">📍 Jaipur, India</div>
+      <div class="b-loc-sub">Final-year B.Tech CSE @ Medicaps University · Graduating May 2026 · Open to relocation</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="m-track">
+    <span>Python</span><span class="hl">★</span>
+    <span>ERP Development</span><span class="hl">★</span>
+    <span>Data Analysis</span><span class="hl">★</span>
+    <span>Computer Vision</span><span class="hl">★</span>
+    <span>Flask</span><span class="hl">★</span>
+    <span>SQL Optimization</span><span class="hl">★</span>
+    <span>OpenCV</span><span class="hl">★</span>
+    <span>Frappe / ERPNext</span><span class="hl">★</span>
+    <span>Python</span><span class="hl">★</span>
+    <span>ERP Development</span><span class="hl">★</span>
+    <span>Data Analysis</span><span class="hl">★</span>
+    <span>Computer Vision</span><span class="hl">★</span>
+    <span>Flask</span><span class="hl">★</span>
+    <span>SQL Optimization</span><span class="hl">★</span>
+    <span>OpenCV</span><span class="hl">★</span>
+    <span>Frappe / ERPNext</span><span class="hl">★</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-row">
+    <div class="stat-tile reveal"><div class="n">92%</div><div class="l">Face Recognition Accuracy</div></div>
+    <div class="stat-tile reveal"><div class="n">35%</div><div class="l">Faster Query Processing</div></div>
+    <div class="stat-tile reveal"><div class="n">50%</div><div class="l">Fewer Data Entry Errors</div></div>
+    <div class="stat-tile reveal"><div class="n">&lt;200ms</div><div class="l">Live Recognition Latency</div></div>
+    <div class="stat-tile reveal"><div class="n">2</div><div class="l">Internships with Production Code Shipped</div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="s-head reveal">
+    <p class="s-eyebrow">Career</p>
+    <h2 class="s-title">Experience</h2>
+  </div>
+  <div class="exp-wrap">
+    <div class="exp-tile reveal">
+      <div class="exp-meta">
+        <span class="exp-period">Jan 2026 — Present</span>
+        <div class="exp-role">ERP Developer Intern</div>
+        <div class="exp-co">Classic Signage Pvt. Ltd<br/>Jaipur</div>
+      </div>
+      <div class="exp-body">
+        <ul>
+          <li>Designed and deployed custom ERPNext modules — Inventory, Sales, HR — with a team of 5, streamlining cross-departmental business logic end-to-end</li>
+          <li>Optimized SQL queries and automated reporting pipelines across the full ERP stack</li>
+          <li>Integrated manufacturing workflows for real-time production tracking and improved operational ROI</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">↑ 35% processing speed</span>
+          <span class="exp-tag">↓ 50% data errors</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-tile reveal">
+      <div class="exp-meta">
+        <span class="exp-period">Jul – Aug 2025</span>
+        <div class="exp-role">AI / ML Intern</div>
+        <div class="exp-co">Cyber Instant Pvt. Ltd<br/>Indore</div>
+      </div>
+      <div class="exp-body">
+        <ul>
+          <li>Built a real-time Face Recognition Attendance System using OpenCV and Dlib, fully automating employee check-in</li>
+          <li>Optimized facial embedding algorithms to hit 92% accuracy at under 200ms — production-ready</li>
+          <li>Integrated engine with SQL databases for automated attendance logging and live reporting</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">92% accuracy</span>
+          <span class="exp-tag">&lt;200ms latency</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="s-head reveal">
+    <p class="s-eyebrow">Work</p>
+    <h2 class="s-title">Projects</h2>
+  </div>
+  <div class="proj-bento">
+    <div class="proj-tile featured reveal">
+      <div class="proj-top">
+        <div class="proj-icon">⚙️</div>
+        <div class="proj-idx">FEATURED · IN PRODUCTION</div>
+      </div>
+      <div class="proj-name">ERPNext Custom Modules</div>
+      <div class="proj-desc">Production-deployed Frappe/ERPNext customizations — Inventory, Sales, HR modules — at a live signage company. Included ETL-based data migration, RBAC configuration, and manufacturing workflow integration on Ubuntu + MariaDB, used across multiple departments daily.</div>
+      <div class="proj-footer">
+        <div class="proj-tagrow">
+          <span class="proj-tagb">ERPNext</span><span class="proj-tagb">Frappe</span>
+          <span class="proj-tagb">Python</span><span class="proj-tagb">MariaDB</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-tile reveal">
+      <div class="proj-top">
+        <div class="proj-icon">💰</div>
+        <div class="proj-idx">01</div>
+      </div>
+      <div class="proj-name">K2 — Kharcha Khabar</div>
+      <div class="proj-desc">Full-stack expense tracking web app with categorized logging, spending visualizations, and responsive UI. Flask + MySQL backend.</div>
+      <div class="proj-footer">
+        <div class="proj-tagrow">
+          <span class="proj-tagb">Python</span><span class="proj-tagb">Flask</span><span class="proj-tagb">MySQL</span>
+        </div>
+        <!-- TODO: replace with the real repo link -->
+        <!-- <a href="https://github.com/Arya13819/k2-kharcha-khabar" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub →</a> -->
+      </div>
+    </div>
+
+    <div class="proj-tile reveal">
+      <div class="proj-top">
+        <div class="proj-icon">🏏</div>
+        <div class="proj-idx">02</div>
+      </div>
+      <div class="proj-name">IPL Cricket Data Analysis</div>
+      <div class="proj-desc">EDA on 12 years of IPL data — 500+ players, 8 teams, 60+ venues. 15+ interactive visualizations on performance trends.</div>
+      <div class="proj-footer">
+        <div class="proj-tagrow">
+          <span class="proj-tagb">Pandas</span><span class="proj-tagb">Matplotlib</span><span class="proj-tagb">NumPy</span>
+        </div>
+        <!-- TODO: replace with the real repo link -->
+        <!-- <a href="https://github.com/Arya13819/ipl-data-analysis" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub →</a> -->
+      </div>
+    </div>
+
+    <div class="proj-tile reveal">
+      <div class="proj-top">
+        <div class="proj-icon">👁️</div>
+        <div class="proj-idx">03</div>
+      </div>
+      <div class="proj-name">Face Recognition Attendance</div>
+      <div class="proj-desc">Real-time attendance system with facial embeddings — fully automated check-in, SQL-backed logging, 92% accuracy at &lt;200ms.</div>
+      <div class="proj-footer">
+        <div class="proj-tagrow">
+          <span class="proj-tagb">OpenCV</span><span class="proj-tagb">Dlib</span><span class="proj-tagb">SQL</span>
+        </div>
+        <!-- TODO: replace with the real repo link -->
+        <!-- <a href="https://github.com/Arya13819/face-recognition-attendance" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub →</a> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="s-head reveal">
+    <p class="s-eyebrow">Stack</p>
+    <h2 class="s-title">Skills</h2>
+  </div>
+  <div class="skills-bento">
+    <div class="skill-tile reveal">
+      <h4>Languages</h4>
+      <div class="skill-pills">
+        <span class="skill-pill">Python</span><span class="skill-pill">SQL</span>
+        <span class="skill-pill">JavaScript</span><span class="skill-pill">Shell Scripting</span><span class="skill-pill">HTML/CSS</span>
+      </div>
+    </div>
+    <div class="skill-tile reveal">
+      <h4>Data & ML</h4>
+      <div class="skill-pills">
+        <span class="skill-pill">Pandas</span><span class="skill-pill">NumPy</span>
+        <span class="skill-pill">Matplotlib</span><span class="skill-pill">OpenCV</span><span class="skill-pill">Dlib</span>
+      </div>
+    </div>
+    <div class="skill-tile reveal">
+      <h4>ERP & Backend</h4>
+      <div class="skill-pills">
+        <span class="skill-pill">ERPNext</span><span class="skill-pill">Frappe</span>
+        <span class="skill-pill">Flask</span><span class="skill-pill">MariaDB</span><span class="skill-pill">MySQL</span>
+      </div>
+    </div>
+    <div class="skill-tile reveal">
+      <h4>Tools</h4>
+      <div class="skill-pills">
+        <span class="skill-pill">GitHub</span><span class="skill-pill">Linux</span>
+        <span class="skill-pill">VS Code</span><span class="skill-pill">DBeaver</span><span class="skill-pill">Postman</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="s-head reveal">
+    <p class="s-eyebrow">Academics</p>
+    <h2 class="s-title">Education</h2>
+  </div>
+  <div class="edu-tile reveal">
+    <div>
+      <div class="edu-degree">B.Tech — Computer Science & Engineering</div>
+      <div class="edu-uni">Medicaps University, Indore</div>
+    </div>
+    <div class="edu-badge">2022 – 2026</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <div id="contact" class="reveal">
+    <p class="contact-eyebrow">Say hello</p>
+    <h2 class="contact-title">Let's build something <span>great</span>.</h2>
+    <p class="contact-sub">Open to SWE, Data, and ERP roles. I reply within 24 hours.</p>
+    <div class="contact-row">
+      <a href="mailto:Aryajpr2004@gmail.com" class="contact-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Aryajpr2004@gmail.com
+      </a>
+      <a href="tel:+919352672795" class="contact-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 93526 72795
+      </a>
+      <a href="https://linkedin.com/in/arya-gupta-067979256" target="_blank" rel="noopener noreferrer" class="contact-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <!-- TODO: replace with your real GitHub username -->
+      <a href="https://github.com/Arya13819" target="_blank" rel="noopener noreferrer" class="contact-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Arya Gupta · Designed &amp; coded by me</footer>
+
+<script>
+const obs = new IntersectionObserver(
+  entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }),
+  {threshold:0.1}
+);
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
