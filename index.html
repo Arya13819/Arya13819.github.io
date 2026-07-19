@@ -435,9 +435,9 @@ footer{text-align:center;padding:2rem;color:#C9BBB1;font-size:0.78rem;font-famil
 <section id="stats">
   <div class="stats-row">
     <div class="stat-tile reveal"><div class="n">92%</div><div class="l">Face Recognition Accuracy</div></div>
+    <div class="stat-tile reveal"><div class="n">34</div><div class="l">Automated Tests on Live K2 App</div></div>
     <div class="stat-tile reveal"><div class="n">35%</div><div class="l">Faster Query Processing</div></div>
     <div class="stat-tile reveal"><div class="n">50%</div><div class="l">Fewer Data Entry Errors</div></div>
-    <div class="stat-tile reveal"><div class="n">&lt;200ms</div><div class="l">Live Recognition Latency</div></div>
     <div class="stat-tile reveal"><div class="n">2</div><div class="l">Internships with Production Code Shipped</div></div>
   </div>
 </section>
@@ -513,15 +513,18 @@ footer{text-align:center;padding:2rem;color:#C9BBB1;font-size:0.78rem;font-famil
     <div class="proj-tile reveal">
       <div class="proj-top">
         <div class="proj-icon">💰</div>
-        <div class="proj-idx">01</div>
+        <div class="proj-idx" style="display:flex;align-items:center;gap:0.4rem;"><span class="dot-live"></span>01 · LIVE</div>
       </div>
       <div class="proj-name">K2 — Kharcha Khabar</div>
-      <div class="proj-desc">Full-stack expense tracking web app with categorized logging, spending visualizations, and responsive UI. Flask + MySQL backend.</div>
+      <div class="proj-desc">Full-stack expense tracker live in production — bcrypt auth, recurring transactions, monthly budget alerts, searchable history, CSV/PDF reports, dark mode. 34-test pytest suite across 11 versioned releases, auto-deployed via GitHub → Render.</div>
       <div class="proj-footer">
         <div class="proj-tagrow">
-          <span class="proj-tagb">Python</span><span class="proj-tagb">Flask</span><span class="proj-tagb">MySQL</span>
+          <span class="proj-tagb">Python</span><span class="proj-tagb">Flask</span><span class="proj-tagb">PostgreSQL</span><span class="proj-tagb">pytest</span>
         </div>
-        <a href="https://github.com/Arya13819/Kharcha-Khabhar-K2" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub →</a>
+        <div style="display:flex;gap:1rem;">
+          <a href="https://kharcha-khabhar-k2.onrender.com" target="_blank" rel="noopener noreferrer" class="proj-link">Live Demo →</a>
+          <a href="https://github.com/Arya13819/Kharcha-Khabhar-K2" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub →</a>
+        </div>
       </div>
     </div>
 
@@ -584,14 +587,14 @@ footer{text-align:center;padding:2rem;color:#C9BBB1;font-size:0.78rem;font-famil
       <h4>ERP & Backend</h4>
       <div class="skill-pills">
         <span class="skill-pill">ERPNext</span><span class="skill-pill">Frappe</span>
-        <span class="skill-pill">Flask</span><span class="skill-pill">MariaDB</span><span class="skill-pill">MySQL</span>
+        <span class="skill-pill">Flask</span><span class="skill-pill">MariaDB</span><span class="skill-pill">MySQL</span><span class="skill-pill">PostgreSQL</span>
       </div>
     </div>
     <div class="skill-tile reveal">
       <h4>Tools</h4>
       <div class="skill-pills">
         <span class="skill-pill">GitHub</span><span class="skill-pill">Linux</span>
-        <span class="skill-pill">VS Code</span><span class="skill-pill">DBeaver</span><span class="skill-pill">Postman</span>
+        <span class="skill-pill">VS Code</span><span class="skill-pill">DBeaver</span><span class="skill-pill">Postman</span><span class="skill-pill">pytest</span><span class="skill-pill">Render</span>
       </div>
     </div>
   </div>
@@ -605,7 +608,7 @@ footer{text-align:center;padding:2rem;color:#C9BBB1;font-size:0.78rem;font-famil
   </div>
   <div class="edu-tile reveal">
     <div>
-      <div class="edu-degree">B.Tech — Computer Science & Engineering</div>
+      <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
       <div class="edu-uni">Medicaps University, Indore</div>
     </div>
     <div class="edu-badge">2022 – 2026</div>
